@@ -63,16 +63,19 @@ npm run dev
 
 ## 🗂 Estrutura do Projeto
 
+```bash
+
 src/
-├── assets/ # Arquivos estáticos ou estilizações adicionais (ex: imagens, SVGs, fontes)
-├── components/ # Componentes reutilizáveis como botões, inputs, modais, etc.
-├── hooks/ # Hooks personalizados com lógica reutilizável em toda a aplicação
-├── interfaces/ # Definições de tipos e interfaces TypeScript de uso global
-├── modules/ # Módulos organizados por domínio/funcionalidade (ex: clients, dashboard, etc.)
-├── pages/ # Páginas principais da aplicação, geralmente associadas às rotas
-├── services/ # Lógicas de comunicação com APIs (ex: instâncias e chamadas com Axios)
-├── styles/ # Estilizações globais (ex: configuração do Tailwind, variáveis CSS)
-└── utils/ # Funções utilitárias e helpers de uso geral
+├── assets/       # Arquivos estáticos ou estilizações adicionais (ex: imagens, SVGs, fontes)
+├── components/   # Componentes reutilizáveis como botões, inputs, modais, etc.
+├── hooks/        # Hooks personalizados com lógica reutilizável em toda a aplicação
+├── interfaces/   # Definições de tipos e interfaces TypeScript de uso global
+├── modules/      # Módulos organizados por domínio/funcionalidade (ex: auth, dashboard, etc.)
+├── pages/        # Páginas principais da aplicação, geralmente associadas às rotas
+├── services/     # Lógicas de comunicação com APIs (ex: instâncias e chamadas com Axios)
+├── styles/       # Estilizações globais (ex: configuração do Tailwind, variáveis CSS)
+└── utils/        # Funções utilitárias e helpers de uso geral
+```
 
 ## 🧾 Backend
 
