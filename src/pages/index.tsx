@@ -1,10 +1,7 @@
 import SiteLayout from "@/components/LayoutSite";
 import { PropertyCard } from "@/components/PropertyCard";
-import { Button } from "flowbite-react";
-import Image from "next/image";
-import topo from "./../assets/img/topo.webp";
+
 import { Hero } from "@/components/Hero";
-import { SearchProperty } from "@/components/SearchProperty";
 
 export default function Home() {
   return (

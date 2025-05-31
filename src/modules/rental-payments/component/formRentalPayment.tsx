@@ -46,7 +46,11 @@ export function FormRentalPayment(props: FormRentalPaymentProps) {
             >
               <option value="">Selecione</option>
               {constracts?.map((contract) => {
-                return <option value={contract.id}>{contract.id}</option>;
+                return (
+                  <option key={contract.id} value={contract.id}>
+                    {contract.id}
+                  </option>
+                );
               })}
             </Select>
           </div>

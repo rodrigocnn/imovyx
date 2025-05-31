@@ -22,7 +22,7 @@ export function useCreateMutation<T>(props: useCreateMutationProps<T>) {
       toast.success(onSuccessMsg);
       queryClient.refetchQueries({ queryKey: [queryKey] });
     },
-    onError: (error) => {
+    onError: () => {
       toast.error("Erro ao realizar o cadastro");
     },
   });

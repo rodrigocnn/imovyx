@@ -1,4 +1,4 @@
-import { Contract, DateFormContract } from "../interfaces";
+import { Contract } from "../interfaces";
 
 export function mapContractFormData(form: Contract): Contract {
   const { start_date, end_date } = form;

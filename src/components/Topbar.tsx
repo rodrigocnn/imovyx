@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 const Topbar = () => {
   return (
     <>
@@ -19,18 +16,6 @@ const Topbar = () => {
         </div>
         <div className="mx-6 topbar-left-col col-span-12 mt-6 sm:mt-0 md:mt-0 lg:mt-0 lg:col-span-6 md:col-span-6 sm:col-span-12 text-end text-white">
           <span className="flex justify-end items-center gap-3 justify-center md:justify-end lg:justify-end sm:justify-center">
-            {/* <a href="//facebook.com">
-              <i className="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="//twitter.com">
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-            <a href="//instagram.com/codewith_uzair">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a href="//github.com/heyitsuzair">
-              <i className="fa-brands fa-github"></i>
-            </a> */}
             <div>
               <i className="fa-solid fa-phone mr-1"></i>
               <span>(77) 3612-5707 </span>

@@ -1,6 +1,6 @@
 import { Button, Label, TextInput, Select, Datepicker } from "flowbite-react";
 import { Contract } from "@/modules/contracts/interfaces";
-import { useModalRentalPayment } from "../hooks/useModalRentalPayment";
+
 import { RentalPayment } from "../interfaces";
 import { CurrencyInput } from "@/components/admin/InputCurrency";
 
@@ -19,7 +19,6 @@ interface FormRentalPaymentProps {
 
 export function FormRentalPaymentModal(props: FormRentalPaymentProps) {
   const {
-    contract,
     form,
     handleChange,
     handleSubmit,

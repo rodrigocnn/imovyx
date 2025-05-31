@@ -1,11 +1,4 @@
-import {
-  Button,
-  Datepicker,
-  Label,
-  Select,
-  Spinner,
-  TextInput,
-} from "flowbite-react";
+import { Button, Datepicker, Label, Select, Spinner } from "flowbite-react";
 import { useFormContract } from "../hooks/useFormContract";
 import { CurrencyInput } from "@/components/admin/InputCurrency";
 import { useEffect } from "react";
@@ -59,7 +52,11 @@ export function FormContract(props: FormContractProps) {
               >
                 <option value="">Selecione Cliente</option>
                 {clients.data?.map((cliente) => {
-                  return <option value={cliente.id}>{cliente.name}</option>;
+                  return (
+                    <option key={cliente.id} value={cliente.id}>
+                      {cliente.name}
+                    </option>
+                  );
                 })}
               </Select>
             </div>
@@ -74,7 +71,11 @@ export function FormContract(props: FormContractProps) {
               >
                 <option value="">Selecione Imóvel</option>
                 {properties?.map((imovel) => {
-                  return <option value={imovel.id}>{imovel.title}</option>;
+                  return (
+                    <option key={imovel.id} value={imovel.id}>
+                      {imovel.title}
+                    </option>
+                  );
                 })}
               </Select>
             </div>
