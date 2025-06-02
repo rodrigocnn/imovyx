@@ -53,7 +53,11 @@ export default function Home() {
         </div>
         <div className="w-1/2 bg-white">
           <h2 className="m-3 font-semibold">Recebimento - Aluguéis</h2>
-          <ReactApexChart options={chartRental} series={chartRental?.series} />
+          <ReactApexChart
+            type="bar"
+            options={chartRental}
+            series={chartRental?.series}
+          />
         </div>
       </div>
     </LayoutAdmin>
