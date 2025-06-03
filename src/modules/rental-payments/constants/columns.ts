@@ -1,7 +1,7 @@
 export const columnsRentalPayment = [
   {
-    headerName: "Contrato",
-    field: "rental_contract_id",
+    headerName: "Cód. do Contrato",
+    field: "contract_code",
   },
   {
     headerName: "Vencimento",
