@@ -2,7 +2,7 @@ import { TextInput } from "flowbite-react";
 import { NumericFormat } from "react-number-format";
 
 interface CurrencyInputProps {
-  value: number | undefined;
+  value: string | undefined;
   onChange: (name: string, value: number | undefined) => void;
   name?: string;
   id?: string;
