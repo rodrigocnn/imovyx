@@ -22,7 +22,6 @@ export function FormClient(props: FormClientProps) {
 
   return (
     <div className="bg-white p-4 rounded">
-      flowbite-react
       <div className="p-6 bg-white rounded-lg shadow-md">
         <form onSubmit={handleSubmit}>
           <div className="w-full bg-gray-200 p-2 mb-4">
