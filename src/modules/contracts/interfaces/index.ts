@@ -16,6 +16,7 @@ export interface Contract {
   end_date?: Date | string | null;
   monthly_rent: number | undefined;
   deposit_amount?: number | undefined;
+  contract_code?: string;
   status: string;
   client?: Client;
   property?: Property;
