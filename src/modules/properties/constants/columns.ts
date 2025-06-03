@@ -11,4 +11,8 @@ export const columnsProperties = [
     headerName: "Tipo de Negociação",
     field: "negotiation_type",
   },
+  {
+    headerName: "Cód. do Imóvel",
+    field: "property_code",
+  },
 ];

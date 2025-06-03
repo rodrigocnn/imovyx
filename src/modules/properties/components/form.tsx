@@ -30,6 +30,7 @@ export function FormProperty(props: FormPropertyProps) {
     neighborhoods,
     create,
     update,
+    cities,
   } = useFormProperty(edit);
 
   useEffect(() => {
@@ -83,6 +84,7 @@ export function FormProperty(props: FormPropertyProps) {
 
             <div className="w-full mb-4">
               <Label htmlFor="tipoNegociacao" value="Tipo de Negociação" />
+
               <Select
                 onChange={handleChange}
                 name="negotiation_type"
@@ -206,6 +208,12 @@ export function FormProperty(props: FormPropertyProps) {
               id="cidade"
               value={form.city_id}
             >
+              {cities.data?.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name}
+                </option>
+              ))}
+              findAll,
               <option value="0">Selecione Cidade</option>
               <option value="1">Barreiras</option>
               <option value="2">Rio de Janeiro</option>
@@ -216,6 +224,7 @@ export function FormProperty(props: FormPropertyProps) {
             <div className="w-full mb-4">
               <Label htmlFor="bairro" value="Bairro" />
               <Select
+                key={form.neighborhood}
                 onChange={handleChange}
                 name="neighborhood"
                 id="bairro"
