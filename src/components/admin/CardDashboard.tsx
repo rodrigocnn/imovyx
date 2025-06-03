@@ -1,4 +1,5 @@
 import { FaSquarePlus } from "react-icons/fa6";
+import Link from "next/link";
 
 interface CardDashboardProps {
   title: string;
@@ -9,7 +10,7 @@ interface CardDashboardProps {
 }
 
 export function CardDashboard(props: CardDashboardProps) {
-  const { title, value, miniDescription, color } = props;
+  const { title, value, miniDescription, color, link } = props;
 
   const colorMap = {
     purple: "bg-purple-700",
@@ -30,15 +31,14 @@ export function CardDashboard(props: CardDashboardProps) {
             </p>
           </div>
 
-          <a
-            href="/dierenartsen"
+          <Link
+            href={link}
             className="text-white font-medium text-base hover:text-white-800"
-            target="_blank"
           >
             <div className="flex items-center gap-2">
               <FaSquarePlus /> Mais detalhes
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
