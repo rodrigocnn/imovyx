@@ -92,6 +92,7 @@ export function FormContract(props: FormContractProps) {
                 name="start_date"
                 onChange={(date) => handleDateChange("start_date", date)}
                 value={form.start_date as Date}
+                key={form.start_date?.toString()}
               />
             </div>
 
@@ -104,6 +105,7 @@ export function FormContract(props: FormContractProps) {
                 name="end_date"
                 onChange={(date) => handleDateChange("end_date", date)}
                 value={form.end_date as Date}
+                key={form.end_date?.toString()}
               />
             </div>
           </div>
