@@ -12,7 +12,7 @@ export const INITIAL_STATE_FORM_RENTAL_PAYMENT = {
   rental_contract_id: "",
   due_date: "",
   payment_date: null,
-  amount: 0,
+  amount: "",
   status: "",
 };
 

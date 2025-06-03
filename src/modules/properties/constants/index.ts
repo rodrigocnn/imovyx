@@ -15,7 +15,7 @@ export const INITIAL_STATE_FORM_PROPERTY = {
   bedrooms: 0,
   bathrooms: 0,
   suites: 0,
-  price: 0,
+  price: "",
   address: "",
   latitude: 0,
   longitude: 0,
