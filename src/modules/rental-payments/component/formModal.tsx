@@ -36,7 +36,7 @@ export function FormRentalPaymentModal(props: FormRentalPaymentProps) {
               onChange={handleChange}
               name="rentalContractId"
               id="rentalContractId"
-              value={props.contract?.id}
+              value={props.contract?.contract_code}
               required
               disabled
             />
