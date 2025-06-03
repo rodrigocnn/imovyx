@@ -69,9 +69,9 @@ export const useFormProperty = (edit: boolean = false) => {
     if (await validation(form, propertySchema as Yup.Schema)) {
       try {
         if (edit) {
-          create.mutate(form);
-        } else {
           update.mutate(form);
+        } else {
+          create.mutate(form);
         }
       } catch (error) {
         console.error("Erro ao enviar:", error);
