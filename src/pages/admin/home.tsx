@@ -22,7 +22,7 @@ export default function Home() {
           value={formatarToCurrencyBR(data?.rental_portfolio as number)}
           miniDescription="No ano atual"
           color="blue"
-          link="#"
+          link="/admin/contratos"
         />
 
         <CardDashboard
@@ -30,7 +30,7 @@ export default function Home() {
           value={formatarToCurrencyBR(data?.overdue_rents as number)}
           miniDescription="No último mês"
           color="rose"
-          link="#"
+          link="/admin/pagamentos"
         />
 
         <CardDashboard
@@ -38,26 +38,32 @@ export default function Home() {
           value={formatarToCurrencyBR(data?.received_rents as number)}
           miniDescription="No último mês"
           color="green"
-          link="#"
+          link="/admin/pagamentos"
         />
       </div>
 
       <div className="mt-5 hidden   lg:flex  lg:gap-3 ">
         <div className="w-1/2 bg-white">
           <h2 className="m-3 font-semibold">Cadastros</h2>
-          <ReactApexChart
-            options={chartRegisters}
-            type="bar"
-            series={chartRegisters?.series}
-          />
+
+          {chartRegisters && (
+            <ReactApexChart
+              options={chartRegisters}
+              type="bar"
+              series={chartRegisters.series}
+            />
+          )}
         </div>
         <div className="w-1/2 bg-white">
           <h2 className="m-3 font-semibold">Recebimento - Aluguéis</h2>
-          <ReactApexChart
-            type="bar"
-            options={chartRental}
-            series={chartRental?.series}
-          />
+
+          {chartRental && (
+            <ReactApexChart
+              type="bar"
+              options={chartRental}
+              series={chartRental?.series}
+            />
+          )}
         </div>
       </div>
     </LayoutAdmin>
