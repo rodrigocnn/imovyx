@@ -48,7 +48,7 @@ export function FormRentalPayment(props: FormRentalPaymentProps) {
               {constracts?.map((contract) => {
                 return (
                   <option key={contract.id} value={contract.id}>
-                    {contract.id}
+                    {contract.contract_code}
                   </option>
                 );
               })}
@@ -100,7 +100,8 @@ export function FormRentalPayment(props: FormRentalPaymentProps) {
               <Select
                 id="status"
                 name="status"
-                value={form.status}
+                disabled={!edit}
+                value={!edit ? "Pendente" : form.status}
                 onChange={handleChange}
               >
                 <option value="">Selecione</option>
