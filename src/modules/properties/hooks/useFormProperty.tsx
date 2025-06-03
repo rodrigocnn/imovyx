@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as Yup from "yup";
 
 import { Property } from "../interfaces";
@@ -7,6 +7,7 @@ import { propertySchema } from "../validations";
 import { validation } from "@/utils/validations";
 import { useFindAllNeighborhoodsByCity } from "@/modules/neighborhoods/hooks/useFindAllNeighborhoodsByCity";
 import { useProperty } from "./useProperty";
+import { useCity } from "@/modules/cidades/hooks/useCity";
 
 export const useFormProperty = (edit: boolean = false) => {
   const [form, setForm] = useState<Property>(INITIAL_STATE_FORM_PROPERTY);
@@ -14,6 +15,13 @@ export const useFormProperty = (edit: boolean = false) => {
     useFindAllNeighborhoodsByCity();
 
   const { create, update } = useProperty();
+  const { findAll: cities } = useCity();
+
+  useEffect(() => {
+    if (edit && form.city_id) {
+      fetchNeighborhoodsByCityId(form.city_id.toString());
+    }
+  }, [form]);
 
   const resetForm = () => {
     setForm(INITIAL_STATE_FORM_PROPERTY);
@@ -90,5 +98,6 @@ export const useFormProperty = (edit: boolean = false) => {
     neighborhoods,
     create,
     update,
+    cities,
   };
 };
