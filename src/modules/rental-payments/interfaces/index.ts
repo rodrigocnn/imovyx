@@ -3,7 +3,7 @@ export interface RentalPayment {
   rental_contract_id: string;
   due_date: Date | string | null;
   payment_date: Date | string | null;
-  amount: number;
+  amount: string;
   status: string;
 }
 

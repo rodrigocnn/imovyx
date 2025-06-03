@@ -19,7 +19,7 @@ export function RentalPaymentProvider({ children }: { children: ReactNode }) {
     ...payment,
     due_date: formatDateToPtBR(payment.due_date as string),
     payment_date: formatDateToPtBR(payment.payment_date as string),
-    amount: Number(formatarToCurrencyBR(payment.amount)),
+    amount: formatarToCurrencyBR(payment.amount),
   });
 
   const setPayments = (rawPayments: RentalPayment[] | undefined) => {
