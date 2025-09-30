@@ -19,7 +19,8 @@ export function useLogin() {
 
     try {
       const response = await api.login("/login", {
-        user: { email, password },
+        email,
+        password,
       });
 
       const data: LoginResponse = response.data;

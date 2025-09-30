@@ -9,9 +9,9 @@ interface CustomModalProps {
   primaryAction?: {
     label: string;
     onClick: () => void;
-    color?: string;
   };
-  size?: string; // <-- agora é opcional
+  size?: string;
+  variant?: "danger" | "default";
 }
 
 export function CustomModal({
@@ -21,19 +21,32 @@ export function CustomModal({
   children,
   primaryAction,
   size = "2xl",
+  variant = "default", // default
 }: CustomModalProps) {
   return (
     <Modal size={size} dismissible show={show} onClose={onClose}>
       {title && <Modal.Header>{title}</Modal.Header>}
+
       <Modal.Body>
-        <div className="space-y-6 ">{children}</div>
+        <div className="space-y-6">{children}</div>
       </Modal.Body>
+
       <Modal.Footer>
-        <Button color="gray" onClick={onClose}>
+        <Button
+          className="focus:outline-none focus:ring-0 active:outline-none active:ring-0 text-black"
+          color="gray"
+          onClick={onClose}
+        >
           Fechar
         </Button>
+
         {primaryAction && (
-          <Button onClick={primaryAction.onClick}>{primaryAction.label}</Button>
+          <Button
+            color={variant === "danger" ? "failure" : "info"}
+            onClick={primaryAction.onClick}
+          >
+            {primaryAction.label}
+          </Button>
         )}
       </Modal.Footer>
     </Modal>

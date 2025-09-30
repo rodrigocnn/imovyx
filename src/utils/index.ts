@@ -42,3 +42,18 @@ export function formatarToCurrencyBR(
     maximumFractionDigits: 2,
   }).format(numero);
 }
+
+export const getTimeFromISO = (isoString: string): string => {
+  const date = new Date(isoString);
+  const hours = date.getUTCHours().toString().padStart(2, "0");
+  const minutes = date.getUTCMinutes().toString().padStart(2, "0");
+  return `${hours}:${minutes}`;
+};
+
+export const getDateFromISO = (isoString: string): string => {
+  const date = new Date(isoString);
+  const year = date.getUTCFullYear();
+  const month = (date.getUTCMonth() + 1).toString().padStart(2, "0"); // meses vão de 0 a 11
+  const day = date.getUTCDate().toString().padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};

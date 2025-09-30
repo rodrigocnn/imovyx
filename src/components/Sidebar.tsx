@@ -40,21 +40,21 @@ export function Sidebar() {
           />
 
           <ItemSidebar
-            href="/admin/clientes"
+            href="/admin/pacientes"
             Icon={<FaUserFriends className="text-xl" />}
-            label="Clientes"
+            label="Pacientes"
           />
 
           <ItemSidebar
-            href="/admin/proprietarios"
+            href="/admin/agenda"
             Icon={<MdOutlineHouseSiding className="text-xl" />}
-            label="Proprietários"
+            label="Agenda"
           />
 
           <ItemSidebar
-            href="/admin/imoveis"
+            href="/admin/sessoes"
             Icon={<MdOutlineRealEstateAgent className="text-xl" />}
-            label="Imóveis"
+            label="Sessões"
           />
 
           <ItemSidebar

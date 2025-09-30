@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
 body {
   font-family: "Poppins", sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 /* Hide Input Numbers Arrow */
 /* Chrome, Safari, Edge, Opera */
@@ -66,4 +66,31 @@ input[type="number"] {
 }
 .width-90 {
   width: 90%;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+.fc-cadastrar-button,
+.fc-toolbar-chunk button {
+  background-color: #0284c7 !important;
+  border: none !important;
+}
+
+.fc-button-group button {
+  margin-right: 5px;
+}
+
+.fc-h-event {
+  border: none;
+}
+
+.fc-button,
+.fc-button-primary,
+.fc-cadastrar-button {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-clip: padding-box; /* evita sombra do browser */
 }

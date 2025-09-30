@@ -3,19 +3,19 @@ const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}", // Inclui arquivos dentro de src/pages
-    "./src/components/**/*.{js,ts,jsx,tsx}", // Inclui arquivos dentro de src/components
-    "./src/app/**/*.{js,ts,jsx,tsx}", // Inclui arquivos dentro de src/app (se você usar app folder)
-    flowbite.content(), // Inclui Flowbite
+    "./src/**/*.{js,ts,jsx,tsx}", // captura tudo dentro de src
+    flowbite.content(),
   ],
   theme: {
     extend: {
       colors: {
-        // Defina suas cores customizadas aqui se necessário
+        // criando sky-600 personalizado
+        sky: {
+          600: "#0284c7", // cor base
+          "600-100": "rgba(2, 132, 199, 0.1)", // variação com 10% de opacidade
+        },
       },
     },
   },
-  plugins: [
-    flowbite.plugin(), // Inclui Flowbite
-  ],
+  plugins: [flowbite.plugin()],
 };
