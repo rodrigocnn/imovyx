@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { Button } from "flowbite-react";
 import { DataGrid, GridPaginationModel } from "@mui/x-data-grid";
+import { ptBR } from "@mui/x-data-grid/locales";
 import { useState } from "react";
 import { useFindAllPatients } from "@/modules/patients/hooks/useFindAllPatients";
 import { columnsPatients } from "@/modules/patients/columns";
 
-import LayoutAdmin from "@/components/LayoutAdmin";
-import { ptBRGridLocaleText } from "@/shared/constants";
+import { ButtonApp } from "@/components/admin/Button";
+import LayoutAdmin from "@/components/admin/LayoutAdmin";
 
 export default function Pacientes() {
   const { data: patients, isLoading } = useFindAllPatients();
@@ -23,9 +23,7 @@ export default function Pacientes() {
 
       <div className="bg-white p-4 rounded h-screen ">
         <Link href={"/admin/pacientes/cadastrar"}>
-          <Button className="text-white bg-sky-500 rounded mb-4 hover:!bg-sky-500/75">
-            Cadastrar
-          </Button>
+          <ButtonApp />
         </Link>
 
         <div className="overflow-x-auto">
@@ -38,7 +36,7 @@ export default function Pacientes() {
             paginationModel={paginationModel}
             onPaginationModelChange={setPaginationModel}
             pageSizeOptions={[5, 10]}
-            localeText={ptBRGridLocaleText}
+            localeText={ptBR.components.MuiDataGrid.defaultProps.localeText}
           />
         </div>
       </div>

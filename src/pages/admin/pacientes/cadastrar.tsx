@@ -1,4 +1,4 @@
-import LayoutAdmin from "@/components/LayoutAdmin";
+import LayoutAdmin from "@/components/admin/LayoutAdmin";
 import { FormPatient } from "@/modules/patients/component/form";
 
 export default function PacientesCadastrar() {

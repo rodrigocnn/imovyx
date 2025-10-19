@@ -10,17 +10,6 @@ export const INITIAL_STATE_FORM_CLIENT = {
   notes: "",
 };
 
-// export const propsFindAllClients = {
-//   queryKey: "get-clients",
-//   queryFn: clientsFindAll,
-// };
-
-// export const propsFindOneClient = {
-//   queryKey: "get-client",
-//   queryFn: (id: string) => clientFindOne(id),
-//   enabled: true,
-// };
-
 export const patientCreateApi = {
   queryKey: "get-clients",
   onSuccessMsg: "Cliente cadastrado com sucesso",
@@ -28,15 +17,16 @@ export const patientCreateApi = {
   urlRedirect: "/admin/clientes",
 };
 
-// export const propsUpdateClient = {
-//   queryKey: "get-properties",
-//   onSuccessMsg: "Imóvel atualizado com sucesso",
-//   mutationFn: (client: Patient) => clientUpdate(client),
-//   urlRedirect: "/admin/clientes",
-// };
+export const richEditorPlugins = [
+  "advlist autolink lists link charmap print preview anchor",
+  "searchreplace visualblocks code fullscreen",
+  "insertdatetime table paste code help wordcount",
+];
 
-// export const propsDeleteClient = {
-//   queryKey: "get-clients",
-//   onSuccessMsg: "Cliente excluída com sucesso",
-//   mutationFn: (id: string) => clientDelete(id),
-// };
+export const richEditorToolbar =
+  "undo redo | formatselect | bold italic underline strikethrough | \
+       alignleft aligncenter alignright alignjustify | \
+       bullist numlist outdent indent | link | code";
+
+export const richEditorStyle =
+  "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }";

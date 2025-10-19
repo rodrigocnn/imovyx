@@ -1,8 +1,9 @@
 import React, { ReactNode } from "react";
-import { Sidebar } from "./Sidebar";
+
 import { useAuthGuard } from "@/hooks/useAuthGuard";
 import { useLogout } from "@/hooks/useLogout";
 import Link from "next/link";
+import { UserMenu } from "../UserMenu";
 
 const LayoutAdmin = ({ children }: { children: ReactNode }) => {
   const { isChecking } = useAuthGuard();
@@ -25,9 +26,9 @@ const LayoutAdmin = ({ children }: { children: ReactNode }) => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="bg-sky-600/100 text-white p-4 flex justify-between items-center shadow-md">
-          <div className="flex items-center space-x-8">
-            <h1 className="text-xl font-semibold">Área Administrativa</h1>
+        <header className="bg-sky-600/100 text-white p-4  flex justify-between items-center shadow-md">
+          <div className="flex items-center space-x-8 ">
+            <h1 className="text-xl font-semibold">MINDCARE</h1>
 
             <nav className="flex space-x-6">
               {menuItems.map((item) => (
@@ -43,12 +44,7 @@ const LayoutAdmin = ({ children }: { children: ReactNode }) => {
           </div>
 
           {/* Logout */}
-          <button
-            onClick={() => logout()}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
-          >
-            Sair
-          </button>
+          <UserMenu />
         </header>
 
         {/* Content Section */}

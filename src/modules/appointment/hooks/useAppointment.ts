@@ -10,6 +10,7 @@ import {
 import { useAppointmentCreate } from "./useAppointmentCreate";
 import { getDateFromISO, getTimeFromISO } from "@/utils";
 import { useAppointmentUpdate } from "./useAppointmentUpdate";
+import { appointmentValidation } from "../validations";
 
 export function useAppointment() {
   const form = useForm<AppointmentForm>();
@@ -60,7 +61,7 @@ export function useAppointment() {
     resetFormModal();
   };
 
-  const bookAppointment = (data: AppointmentForm) => {
+  const bookAppointment = async (data: AppointmentForm) => {
     if (isModeUpdate) {
       const idAppointment = form.getValues("id");
       const dataForm = { ...data };
@@ -68,8 +69,10 @@ export function useAppointment() {
       const payload = persistUpdateMapperAppointment(dataForm);
       appointmentUpdate.mutate(payload);
     } else {
-      const payload = persistMapperAppointment(data);
-      appointmentCreate.mutate(payload);
+      if (await appointmentValidation(data)) {
+        const payload = persistMapperAppointment(data);
+        appointmentCreate.mutate(payload);
+      }
     }
   };
 

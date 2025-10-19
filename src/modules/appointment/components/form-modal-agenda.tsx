@@ -22,11 +22,11 @@ export function FormModalAgenda(props: PropsFormModalAgenda) {
       <div className="w-full mb-4">
         <Select
           {...register("patientId")}
-          defaultValue={-1}
+          defaultValue={""}
           id="patientId"
           required
         >
-          <option value={-1}>Selecione um Paciente</option>
+          <option value={""}>Selecione um Paciente</option>
           {patients?.map((patient) => (
             <option key={patient.id} value={patient.id}>
               {patient.name}

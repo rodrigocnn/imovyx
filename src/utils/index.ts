@@ -57,3 +57,6 @@ export const getDateFromISO = (isoString: string): string => {
   const day = date.getUTCDate().toString().padStart(2, "0");
   return `${year}-${month}-${day}`;
 };
+
+export const formatTime = (date: Date) =>
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });

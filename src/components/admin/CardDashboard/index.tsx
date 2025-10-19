@@ -1,5 +1,4 @@
-import { FaSquarePlus } from "react-icons/fa6";
-import Link from "next/link";
+import React from "react";
 
 interface CardDashboardProps {
   title: string;

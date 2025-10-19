@@ -1,5 +1,4 @@
-import LayoutAdmin from "@/components/LayoutAdmin";
-
+import LayoutAdmin from "@/components/admin/LayoutAdmin";
 import { FormPatient } from "@/modules/patients/component/form";
 import { usePatientShowQuery } from "@/modules/patients/hooks/usePatientShowQuery";
 import { Patient } from "@/modules/patients/interfaces";

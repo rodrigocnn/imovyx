@@ -94,3 +94,8 @@ input[type="number"] {
   box-shadow: none !important;
   background-clip: padding-box; /* evita sombra do browser */
 }
+
+.tox-promotion,
+.tox-statusbar__branding {
+  visibility: hidden;
+}

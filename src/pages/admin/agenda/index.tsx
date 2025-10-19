@@ -3,14 +3,13 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
-import LayoutAdmin from "@/components/LayoutAdmin";
-
+import LayoutAdmin from "@/components/admin/LayoutAdmin";
 import { FormModalAgenda } from "@/modules/appointment/components/form-modal-agenda";
-import { CustomModal } from "@/components/Modal";
 import { useAppointment } from "@/modules/appointment/hooks/useAppointment";
 import { useFindAllPatients } from "@/modules/patients/hooks/useFindAllPatients";
 import { useFindAllAppoitments } from "@/modules/appointment/hooks/useFindAllAppoitments";
 import { renderEventContent } from "@/modules/appointment/components/render-event-content";
+import { CustomModal } from "@/components/admin/Modal";
 
 export default function Appointment() {
   const {
