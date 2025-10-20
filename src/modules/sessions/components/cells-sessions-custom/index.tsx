@@ -1,26 +1,20 @@
 import { GridRenderCellParams } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
-import { FaEdit, FaTrash } from "react-icons/fa";
-import { BsJournalMedical } from "react-icons/bs";
-import { AiOutlineDelete } from "react-icons/ai";
-import { BiTime } from "react-icons/bi";
+import { FaEdit } from "react-icons/fa";
 
-import { useColumnsDataGrid } from "../hooks/useColumnsDatagrid";
+import { AiOutlineDelete } from "react-icons/ai";
+
 import { CustomModal } from "@/components/admin/Modal";
+import { useSessionsColumnsDataGrid } from "../../hooks/useSessionsColumnsDatagrid";
 
 interface IPropsCellCustomPatients {
   params: GridRenderCellParams;
 }
 
-export function CellsPatientsCustom(props: IPropsCellCustomPatients) {
-  const {
-    handleSessionClick,
-    handleEditClick,
-    handleDeleteClick,
-    isModalOpen,
-    setIsModalOpen,
-  } = useColumnsDataGrid();
+export function CellsSessionsCustom(props: IPropsCellCustomPatients) {
   const { params } = props;
+  const { handleEditClick, handleDeleteClick, isModalOpen, setIsModalOpen } =
+    useSessionsColumnsDataGrid();
 
   return (
     <div className="w-full h-full flex  justify-start space-x-2 px-1">
@@ -39,15 +33,6 @@ export function CellsPatientsCustom(props: IPropsCellCustomPatients) {
           </p>
         </div>
       </CustomModal>
-
-      <Button
-        variant="text"
-        color="inherit"
-        startIcon={<BiTime />}
-        onClick={() => handleSessionClick(params.row)}
-      >
-        Sessões
-      </Button>
 
       <Button
         variant="text"

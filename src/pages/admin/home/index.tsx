@@ -8,7 +8,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 import { CardDashboard } from "@/components/admin/CardDashboard";
 import { useDashboard } from "@/modules/dashboard/hooks/useDashboard";
 import { chartCallServices, chartData } from "./charts";
-import LayoutAdmin from "@/components/LayoutAdmin";
+import LayoutAdmin from "@/components/admin/LayoutAdmin";
 
 export default function Home() {
   const { data, chartRegisters, chartRental } = useDashboard();

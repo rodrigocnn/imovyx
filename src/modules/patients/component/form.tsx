@@ -1,5 +1,5 @@
 import { Label, TextInput, Spinner, Radio, Textarea } from "flowbite-react";
-import { useFormPatient } from "../hooks/useFormClient";
+import { useFormPatient } from "../hooks/useFormPatient";
 import { useEffect } from "react";
 import { Patient } from "../interfaces";
 import { ButtonApp } from "@/components/admin/Button";

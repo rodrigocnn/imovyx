@@ -1,4 +1,5 @@
 export interface Session {
+  id?: string;
   summary?: string;
   behavioralObservations?: string;
   interventions?: string;

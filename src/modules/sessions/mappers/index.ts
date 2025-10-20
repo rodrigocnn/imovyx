@@ -12,3 +12,12 @@ export function persistMapperSession(
     ...payload,
   };
 }
+
+export function updateMapperSession(form: FormSession): FormSession {
+  const payload = { ...form };
+
+  payload.sessionDate = new Date().toISOString();
+  return {
+    ...payload,
+  };
+}

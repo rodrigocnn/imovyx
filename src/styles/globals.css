@@ -99,3 +99,8 @@ input[type="number"] {
 .tox-statusbar__branding {
   visibility: hidden;
 }
+
+.textarea-base {
+  @apply w-full border border-gray-300 rounded-lg p-2 
+         focus:ring-sky-400 focus:border-sky-400 min-h-[120px];
+}
